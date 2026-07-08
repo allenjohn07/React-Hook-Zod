@@ -6,21 +6,20 @@ import {
   ScrollView,
   StyleSheet,
   Text,
-  TouchableOpacity,
   View,
 } from 'react-native';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Ionicons } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
+import { Link } from 'expo-router';
 
 import { CustomInput } from '../components/CustomInput';
 import { CustomButton } from '../components/CustomButton';
+import { RouteIndicator } from '../components/RouteIndicator';
 import { signInSchema, type SignInFormData } from '../schemas/signInSchema';
 import { colors, fontSizes, radii, spacing } from '../theme';
 
 export function SignInScreen() {
-  const router = useRouter();
   const {
     control,
     handleSubmit,
@@ -49,6 +48,7 @@ export function SignInScreen() {
         showsVerticalScrollIndicator={false}
       >
         <View style={styles.header}>
+          <RouteIndicator />
           <View style={styles.iconBadge}>
             <Ionicons name="lock-closed" size={28} color={colors.primary} />
           </View>
@@ -87,9 +87,9 @@ export function SignInScreen() {
 
         <View style={styles.footer}>
           <Text style={styles.footerText}>Don't have an account? </Text>
-          <TouchableOpacity onPress={() => router.push('/sign-up')}>
-            <Text style={styles.footerLink}>Sign Up</Text>
-          </TouchableOpacity>
+          <Link href="/sign-up" style={styles.footerLink}>
+            Sign Up
+          </Link>
         </View>
       </ScrollView>
     </KeyboardAvoidingView>

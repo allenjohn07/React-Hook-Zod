@@ -15,6 +15,7 @@ import { useRouter } from 'expo-router';
 
 import { CustomInput } from '../components/CustomInput';
 import { CustomButton } from '../components/CustomButton';
+import { RouteIndicator } from '../components/RouteIndicator';
 import { employeeSchema, type EmployeeFormData } from '../schemas/employeeSchema';
 import { colors, fontSizes, radii, spacing } from '../theme';
 
@@ -57,6 +58,7 @@ export function EmployeeScreen() {
         showsVerticalScrollIndicator={false}
       >
         <View style={styles.header}>
+          <RouteIndicator />
           <View style={styles.iconBadge}>
             <Ionicons name="people" size={28} color={colors.primary} />
           </View>
