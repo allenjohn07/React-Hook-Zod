@@ -42,7 +42,7 @@ Zod validation errors display in real time (`mode: 'onChange'`). Invalid fields 
 
 ### Employee Information Form
 
-![Employee form showing Zod validation errors](./docs/screenshots/employee-form.png)
+<img src="./docs/screenshots/employee-form.png" width="280" alt="Employee form showing Zod validation errors" />
 
 | Input entered | Zod rule triggered | Error message shown |
 |---|---|---|
@@ -57,7 +57,7 @@ Zod validation errors display in real time (`mode: 'onChange'`). Invalid fields 
 
 ### Sign-In Form
 
-![Sign In form showing Zod validation errors](./docs/screenshots/sign-in-form.png)
+<img src="./docs/screenshots/sign-in-form.png" width="280" alt="Sign In form showing Zod validation errors" />
 
 | Input entered | Zod rule triggered | Error message shown |
 |---|---|---|
@@ -68,7 +68,7 @@ Zod validation errors display in real time (`mode: 'onChange'`). Invalid fields 
 
 ### Sign-Up Form
 
-![Sign Up form showing Zod validation errors](./docs/screenshots/sign-up-form.png)
+<img src="./docs/screenshots/sign-up-form.png" width="280" alt="Sign Up form showing Zod validation errors" />
 
 | Input entered | Zod rule triggered | Error message shown |
 |---|---|---|
@@ -147,4 +147,6 @@ Press `i` for iOS, `a` for Android, or `w` for web.
 
 ---
 
-**Allen John** · 000961216
+## Submitted by
+
+Allen John — 000961216
