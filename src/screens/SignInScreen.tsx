@@ -15,7 +15,6 @@ import { Link } from 'expo-router';
 
 import { CustomInput } from '../components/CustomInput';
 import { CustomButton } from '../components/CustomButton';
-import { RouteIndicator } from '../components/RouteIndicator';
 import { signInSchema, type SignInFormData } from '../schemas/signInSchema';
 import { colors, fontSizes, radii, spacing } from '../theme';
 
@@ -48,7 +47,6 @@ export function SignInScreen() {
         showsVerticalScrollIndicator={false}
       >
         <View style={styles.header}>
-          <RouteIndicator />
           <View style={styles.iconBadge}>
             <Ionicons name="lock-closed" size={28} color={colors.primary} />
           </View>

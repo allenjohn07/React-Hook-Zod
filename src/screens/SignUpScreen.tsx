@@ -15,7 +15,6 @@ import { Link } from 'expo-router';
 
 import { CustomInput } from '../components/CustomInput';
 import { CustomButton } from '../components/CustomButton';
-import { RouteIndicator } from '../components/RouteIndicator';
 import { signUpSchema, type SignUpFormData } from '../schemas/signUpSchema';
 import { colors, fontSizes, radii, spacing } from '../theme';
 
@@ -50,7 +49,6 @@ export function SignUpScreen() {
         showsVerticalScrollIndicator={false}
       >
         <View style={styles.header}>
-          <RouteIndicator />
           <View style={styles.iconBadge}>
             <Ionicons name="person-add" size={28} color={colors.primary} />
           </View>

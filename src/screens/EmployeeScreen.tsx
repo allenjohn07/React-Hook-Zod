@@ -11,16 +11,13 @@ import {
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Ionicons } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
 
 import { CustomInput } from '../components/CustomInput';
 import { CustomButton } from '../components/CustomButton';
-import { RouteIndicator } from '../components/RouteIndicator';
 import { employeeSchema, type EmployeeFormData } from '../schemas/employeeSchema';
 import { colors, fontSizes, radii, spacing } from '../theme';
 
 export function EmployeeScreen() {
-  const router = useRouter();
   const {
     control,
     handleSubmit,
@@ -58,7 +55,6 @@ export function EmployeeScreen() {
         showsVerticalScrollIndicator={false}
       >
         <View style={styles.header}>
-          <RouteIndicator />
           <View style={styles.iconBadge}>
             <Ionicons name="people" size={28} color={colors.primary} />
           </View>
@@ -128,14 +124,6 @@ export function EmployeeScreen() {
             style={styles.submitButton}
           />
         </View>
-
-        <CustomButton
-          title="Go to Sign In"
-          variant="secondary"
-          icon="log-in-outline"
-          onPress={() => router.push('/sign-in')}
-          style={styles.linkButton}
-        />
       </ScrollView>
     </KeyboardAvoidingView>
   );
@@ -183,8 +171,5 @@ const styles = StyleSheet.create({
   },
   submitButton: {
     marginTop: spacing.sm,
-  },
-  linkButton: {
-    marginTop: spacing.lg,
   },
 });
